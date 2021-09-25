@@ -1,31 +1,31 @@
 package pluginlib
 
 var PluginType = struct {
-	PROXY     int
-	CONTAINER int
-	DNS       int
-	MISC      int
+	PROXY       int
+	CONTAINER   int
+	DNS         int
+	APPLICATION int
 }{
-	PROXY:     0,
-	CONTAINER: 1,
-	DNS:       2,
-	MISC:      3,
+	PROXY:       0,
+	CONTAINER:   1,
+	DNS:         2,
+	APPLICATION: 3,
 }
 
 type TerraformProvider struct {
-	name               string
-	vendor             string
-	version            string
-	resourceName       string
-	init               string
-	providerPerProject bool
+	name               string `yaml:"name"`
+	vendor             string `yaml:"vendor"`
+	version            string `yaml:"version"`
+	resourceName       string `yaml:"resource_name"`
+	init               string `yaml:"init"`
+	providerPerProject bool   `yaml:"provider_per_project"`
 }
 
 type PluginConfig struct {
-	Name        string
-	Description string
-	Version     string
-	Author      string
-	PluginType  int
+	Name        string 	 `yaml:"name"`
+	Description string 	 `yaml:"description,omitempty"`
+	Version     string 	 `yaml:"version,omitempty"`
+	Authors     []string `yaml:"authors,omitempty"`
+	PluginType  int      `yaml:"plugin_type"`
 	Terraform   TerraformProvider
 }
