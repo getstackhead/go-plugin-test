@@ -35,12 +35,12 @@ func LoadPlugin(path string) (Plugin, *PluginConfig, error) {
 	if err != nil {
 		return nil, nil, err
 	}
-	var pluginConfig PluginConfig
-	pluginConfig, ok = symPluginConfig.(PluginConfig)
+	var pluginConfig *PluginConfig
+	pluginConfig, ok = symPluginConfig.(*PluginConfig)
 	if !ok {
 		return nil, nil, err
 	}
 
 	// 4. Assert that loaded symbol is of a desired type
-	return pluginObj, &pluginConfig, nil
+	return pluginObj, pluginConfig, nil
 }
