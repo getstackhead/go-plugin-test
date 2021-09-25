@@ -1,19 +1,21 @@
 package main
 
-import "fmt"
-import "github.com/getstackhead/pluginlib"
+import (
+	"fmt"
 
-type MyPlugin struct {
+	"github.com/getstackhead/pluginlib"
+)
+
+var Plugin MyPlugin
+var PluginConfig = pluginlib.PluginConfig{
+	Name:        "Test",
+	Description: "This is an example StackHead Proxy plugin",
+	Version:     "0.0.0-dev",
+	Authors:     []string{"Mario Lubenka"},
+	PluginType:  pluginlib.PluginType.PROXY,
 }
 
-func (p MyPlugin) GetConfig() pluginlib.PluginConfig {
-	return pluginlib.PluginConfig{
-		Name:        "Test",
-		Description: "This is an example StackHead Proxy plugin",
-		Version:     "0.0.0-dev",
-		Author:      "Mario Lubenka",
-		PluginType:  pluginlib.PluginType.PROXY,
-	}
+type MyPlugin struct {
 }
 
 func (p MyPlugin) Deploy(project pluginlib.Project) {
@@ -27,5 +29,3 @@ func (p MyPlugin) Destroy(project pluginlib.Project) {
 func (p MyPlugin) Setup() {
 	fmt.Println("Setup...")
 }
-
-var Plugin MyPlugin
