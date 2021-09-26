@@ -5,7 +5,6 @@ import (
 )
 
 type Plugin interface {
-	GetConfig() PluginConfig
 	Setup()
 	Deploy(project Project)
 	Destroy(project Project)
