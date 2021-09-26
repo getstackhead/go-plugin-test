@@ -29,3 +29,7 @@ func (p MyPlugin) Destroy(project pluginlib.Project) {
 func (p MyPlugin) Setup() {
 	fmt.Println("Setup...")
 }
+
+func (p MyPlugin) TriggerHook(hookName string, project pluginlib.Project) {
+	fmt.Println("Hook " + hookName + " triggered for project " + project.Name + ".")
+}

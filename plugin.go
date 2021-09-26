@@ -8,6 +8,7 @@ type Plugin interface {
 	Setup()
 	Deploy(project Project)
 	Destroy(project Project)
+	TriggerHook(hookName string, project Project)
 }
 
 func LoadPlugin(path string) (Plugin, *PluginConfig, error) {
