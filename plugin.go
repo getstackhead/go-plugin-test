@@ -5,9 +5,9 @@ import (
 )
 
 type Plugin interface {
-	Setup()
-	Deploy(project Project)
-	Destroy(project Project)
+	Setup() <-chan error
+	Deploy(project Project) <-chan error
+	Destroy(project Project) <-chan error
 	TriggerHook(hookName string, project Project)
 }
 
