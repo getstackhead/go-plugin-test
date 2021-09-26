@@ -4,10 +4,10 @@ type PackageName struct {
 	ApkPackageName string
 }
 
-func InstallPackage(packageName PackageName) <-chan error {
-	return StackHeadMain.Execute(IntCmdInstallPkgApk, packageName.ApkPackageName)
+func InstallPackage(packageName PackageName) error {
+	return ExecCmd(IntCmdInstallPkgApk, packageName.ApkPackageName)
 }
 
-func UninstallPackage(packageName PackageName) <-chan error {
-	return StackHeadMain.Execute(IntCmdUninstallPkgApk, packageName.ApkPackageName)
+func UninstallPackage(packageName PackageName) error {
+	return ExecCmd(IntCmdUninstallPkgApk, packageName.ApkPackageName)
 }

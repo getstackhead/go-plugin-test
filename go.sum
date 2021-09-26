@@ -1,2 +1,4 @@
 github.com/asaskevich/EventBus v0.0.0-20200907212545-49d423059eef h1:2JGTg6JapxP9/R33ZaagQtAM4EkkSYnIAlOG5EI8gkM=
 github.com/asaskevich/EventBus v0.0.0-20200907212545-49d423059eef/go.mod h1:JS7hed4L1fj0hXcyEejnW57/7LCetXggd+vwrRnYeII=
+github.com/valyala/gorpc v0.0.0-20160519171614-908281bef774 h1:SUHFQHAaySqF0YHCmmm0EIFooFZpDPpi5KTom7YJ07c=
+github.com/valyala/gorpc v0.0.0-20160519171614-908281bef774/go.mod h1:8uNqM1i7pr0jO7gdvbNCgsSa8Ki2vMh7JCQxO9BlF90=
