@@ -29,10 +29,10 @@ message StackHeadPluginConfig {
   string AdditionalJsonData = 1;
   string Name = 2;
   string Description = 3;
-  optional string Version = 4;
+  string Version = 4;
   repeated string Authors = 5;
   string PluginType = 6;
-  optional StackHeadPluginTerraformConfig Terraform = 7;
+  StackHeadPluginTerraformConfig Terraform = 7;
 }
 
 message StackHeadPluginTerraformConfig {
