@@ -1,11 +1,10 @@
 package pluginlib
 
-type Project struct {
-	Name string
+type Package struct {
+	ApkPackage string
 }
 
-func GetProject() *Project {
+func InstallPackage(packages []Package) {
 	// mock function
 	// behaviour is implemented in StackHead main repository
-	return nil
 }
