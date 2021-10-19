@@ -1,7 +1,13 @@
 package pluginlib
 
+type PackageVendor string
+
+var PackageVendorApt PackageVendor = "apt"
+var PackageVendorApk PackageVendor = "apk"
+
 type Package struct {
-	ApkPackage string
+	Name   string
+	Vendor PackageVendor
 }
 
 func InstallPackage(packages []Package) {
