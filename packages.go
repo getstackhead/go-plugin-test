@@ -10,7 +10,8 @@ type Package struct {
 	Vendor PackageVendor
 }
 
-func InstallPackage(packages []Package) {
+func InstallPackage(packages []Package) error {
 	// mock function
 	// behaviour is implemented in StackHead main repository
+	return nil
 }
