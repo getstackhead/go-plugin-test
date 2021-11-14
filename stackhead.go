@@ -1,7 +1,9 @@
 package pluginlib
 
-func StackHeadExecute(command string) error {
+import "bytes"
+
+func StackHeadExecute(command string) (bytes.Buffer, error) {
 	// mock function
 	// behaviour is implemented in StackHead main repository
-	return nil
+	return bytes.Buffer{}, nil
 }
